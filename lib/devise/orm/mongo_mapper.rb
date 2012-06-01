@@ -14,14 +14,14 @@ module Devise
         def devise_modules_hook!
           extend Schema
           yield
-          return unless Devise.apply_schema
+         # return unless Devise.apply_schema
           devise_modules.each { |m| send(m) if respond_to?(m, true) }
         end
 
       end
 
       module Schema
-        include Devise::Schema
+        #include Devise::Schema
 
         # Tell how to apply schema methods
         def apply_devise_schema(name, type, options={})
