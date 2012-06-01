@@ -1,5 +1,5 @@
 require 'orm_adapter/adapters/mongo_mapper'
-
+#Redifined
 module Devise
   module Orm
     module MongoMapper
