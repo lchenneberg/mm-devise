@@ -14,6 +14,7 @@ module Devise
         def devise_modules_hook!
           extend Schema
           yield
+	 #Uncomment for version of Devise under 1.2
          # return unless Devise.apply_schema
           devise_modules.each { |m| send(m) if respond_to?(m, true) }
         end
@@ -21,6 +22,7 @@ module Devise
       end
 
       module Schema
+	#Uncomment for version of Devise under 1.2
         #include Devise::Schema
 
         # Tell how to apply schema methods
